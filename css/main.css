@@ -1,7 +1,8 @@
-:root{
-
+:root {
+  --main-bg: #f1f5f9;
+  --primary-bg: #eeeeee;
 }
-*{
+* {
   margin: 0px;
   padding: 0px;
   list-style: none;
@@ -10,6 +11,129 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-html{
+html {
   scroll-behavior: smooth;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a:hover,
+a {
+  text-decoration: none;
+  color: inherit;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-bg);
+  border-radius: 3px;
+}
+main .side-b {
+  z-index: 1000;
+}
+.side-b .side-h {
+  font-size: 8px;
+}
+@media (min-width: 768px) {
+  .side-b {
+    min-width: 16%;
+    max-width: 17%;
+  }
+  .side-b .side-h {
+    position: relative;
+    font-size: 25px;
+  }
+  .side-b .side-h::before,
+  .side-b .side-h::after {
+    position: absolute;
+    content: "";
+    background-color: black;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .side-b .side-h::before {
+    width: 65px;
+    height: 2px;
+    bottom: 18px;
+  }
+  .side-b .side-h::after {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    bottom: 10px;
+    border: 5px solid white;
+  }
+}
+main .side-b h6 {
+  top: calc(100vh - 70px);
+}
+main .side-b ul li a {
+  width: 100%;
+}
+main .side-b ul li:hover {
+  background-color: var(--primary-bg);
+  transition: 0.35s;
+}
+main .navbar {
+  z-index: 999;
+}
+main .navbar .search::placeholder {
+  color: #ccc;
+}
+main .navbar .search:focus::placeholder {
+  opacity: 0;
+}
+main .navbar .search:focus {
+  outline: none;
+  width: 250px;
+}
+main .navbar .search {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-left: 5px;
+  padding-left: 30px;
+  width: 200px;
+  transition: width 0.3s;
+}
+main .navbar form::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f002";
+  position: absolute;
+  font-weight: 900;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #ccc;
+}
+main .navbar img {
+  width: 35px;
+}
+/* navbar & sidebar */
+main section {
+  background-color: var(--main-bg);
+}
+.main-title::before,
+.main-title::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: 0px;
+  bottom: -10px;
+  border-radius: 10px;
+}
+.main-title::before {
+  width: 120px;
+  background-color: white;
+}
+.main-title::after {
+  width: 50px;
+  background-color: black;
+}
+section.plans .card-head span {
+  font-size: 40px;
 }
